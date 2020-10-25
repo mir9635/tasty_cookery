@@ -1,0 +1,62 @@
+extends template/layout
+
+block content
+    .main
+        section.section1
+            .container
+                .row.js-owl-mobile(data-margin="20")
+                    //- mixin
+                    mixin section1-item(img,text)
+                        .section1-item.wow.bounceInUp
+                            .section1-item__img
+                                img(src=img alt=text)
+                            .section1-item__text= text
+
+                    +section1-item('./imgs/section11.svg','Простые домашние рецепты')
+                    +section1-item('./imgs/section12.svg','Статьи о готовке')
+                    +section1-item('./imgs/section13.svg','Бесплатная книга рецептов всем подписчикам')
+                    +section1-item('./imgs/section14.svg','Собирайте рецепты в recipe box')
+                    +section1-item('./imgs/section15.svg','Печать рецептов')
+        section.section2
+            .container
+                h2.h2 Почему круто быть с нами:
+                .row.section2__row.js-owl-mobile(data-margin="20")
+                    mixin section2-item(img,text)
+                        .section2-item.wow.bounceInUp
+                            .section2-item__img
+                                img(src=img alt=text)
+                            .section2-item__text= text
+                    +section2-item('./imgs/section21.png','Получать лучшие рецепты по разным категориям')
+                    +section2-item('./imgs/section22.png','Готовить без лишних усилий и делать из каждого дня не рутинный')
+                    +section2-item('./imgs/section23.png','Довольные члены семьи')
+        section.section3
+            .container
+                .section3__text
+                    span Удобно получать на емейл уникальные проверенные рецепты,
+                    | которые дружная команда Tastycookery попробовала сама и рекомендует
+                .section3__button
+                    a(href="javascript:;" data-to="form").btn-gradient.js-scroll
+                        span Стать членом семьи Tastycookery
+                            b бесплатно
+        section.section4
+            .container
+                h2.h2 Отзывы довольных пользователей
+                .row.section4__row.js-owl-mobile(data-margin="20")
+                    mixin section4-item(text,img,name,old)
+                        .section4-item
+                            .section4-item__comment-wrap
+                                .section4-item__comment= text
+                            .section4-item__main
+                                .section4-item__img
+                                    img(src=img alt=name)
+                                .section4-item__right
+                                    .section4-item__name= name
+                                    .section4-item__old= old
+                    +section4-item('После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.','imgs/section41.jpg','Дейнерис','56 лет')
+                    +section4-item('Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день','imgs/section42.jpg','Тайвин','43 года')
+                    +section4-item('Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела на 3 кг. И очень рекомендует всем использовать рецепты с сайта','imgs/section43.jpg','Серсея','56 лет')
+
+
+
+
+

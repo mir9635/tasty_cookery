@@ -1,0 +1,240 @@
+/* COMMON STYLE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: $text-color;
+    font-family: $body-font;
+    font-size: $font-size-base;
+    line-height: 1.4;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $primary-color;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+img {
+    vertical-align: bottom;
+}
+
+sup, 
+small {
+    font-size: 75%;
+}
+
+a, 
+img, 
+input, 
+textarea, 
+button {
+    border: 0;
+    background: rgba(0,0,0,0.0);
+    transition: all 0.4s ease 0s;
+}
+
+input, 
+textarea, 
+select, 
+button {
+    outline: none;
+}
+
+input::placeholder {
+    opacity: 1;
+}
+
+
+/* H1 - H6 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $headers-font;
+}
+
+
+/* FORMS */
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="tel"],
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea {
+    border: none;
+    display: inline-block;
+    font-family: $body-font;
+    font-size: $font-size-base;
+    //padding: 1em 1.5em;
+    width: 100%;
+    background: #fff;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    resize: vertical;
+}
+
+textarea::placeholder {
+    opacity: 1;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
+
+/* SELECT */
+select {
+    /*for WebKit*/
+    -webkit-appearance: none;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '...';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none !important;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* BUTTONS */
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover, 
+input[type="button"]:hover, 
+button:hover {}
+
+
+.btn {
+    background-color: rgba(0,0,0,0.0);
+    color: #fff;
+    border: 1px solid;
+    border-radius:0;
+    padding: 0.7em 2em;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    @include lineheight(16,20);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn {}
+.btn-gradient {
+    display: inline-block;
+    background-image:linear-gradient(to right, #bfdf2c 20%, #12bc82 90%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    color: #fff;
+    &::after {
+        transition: all ease 0.4s;
+        opacity: 1;
+        visibility: visible;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:linear-gradient(to right, #12bc82 20%, #bfdf2c 90%);
+    }
+    span {
+        position: relative;
+        z-index: 2;
+        font-size: 20px;
+        padding: 17px 70px;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    b {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    &:hover,
+    &:focus {
+        color: #fff;
+        &::after {
+            transition: all ease 0.4s;
+            opacity: 0;
+            visibility: hidden;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:linear-gradient(to right, #12bc82 20%, #bfdf2c 90%);
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+

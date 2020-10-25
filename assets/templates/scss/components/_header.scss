@@ -1,0 +1,121 @@
+.header {
+  background:url("../imgs/header-bg.jpg") center no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  &::before {
+    content: '';
+    background: url("../imgs/woman-before.png") 100% 0% no-repeat;
+    background-size: contain;
+    width: 32.6vw;
+    height: 9.7vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    background: url("../imgs/woman-after.png") 0% 100% no-repeat;
+    background-size: contain;
+    width: 94.4vw;
+    height: 20.8vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &__col {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 15px;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 3;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      padding-top: 23px;
+      padding-bottom: 40px;
+    }
+  }
+  &__logo {
+    display: block;
+    margin: 0 0 75px;
+    @media screen and (max-width: 767px) {
+      margin: 0 0 25px;
+    }
+  }
+  &__h1 {
+    font-size: 54px;
+    font-weight: 800;
+    max-width: 550px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    @media screen and (max-width: 1130px) {
+      font-size: 48px;
+    }
+    @media screen and (max-width: 1010px) {
+      font-size: 42px;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 34px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
+      margin: 0 0 11px;
+      text-align: center;
+    }
+  }
+  &__text {
+    font-size: 24px;
+    margin: 0 0 35px;
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 0 252px;
+    }
+  }
+  &__button {
+    .btn-gradient {
+        span {
+          max-width: 335px;
+        }
+    }
+  }
+  &__woman {
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%,0);
+      height: auto;
+    }
+    img {
+      display: inline-block;
+      max-width: 500px;
+      height: auto;
+      position: relative;
+      left: -60px;
+      @media screen and (max-width: 1130px) {
+        max-width: 450px;
+      }
+      @media screen and (max-width: 767px) {
+        max-width: 360px;
+        left: 0;
+      }
+    }
+  }
+}

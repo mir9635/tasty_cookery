@@ -1,0 +1,116 @@
+.footer {
+  color: #fff;
+  padding: 145px 0 12px;
+  background: url("../imgs/footer.jpg") center no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 767px) {
+    padding: 38px 0 20px;
+  }
+  &__row {
+    margin-left: 30px;
+    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin: 0 -15px;
+    }
+  }
+  &__col {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 30px;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 0 15px;
+    }
+  }
+  &__info {
+    font-size: 24px;
+    line-height: 1.2;
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+  }
+  &__form {
+    padding-left: 20px;
+    @media screen and (max-width: 767px) {
+      padding-left: 0;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    margin: 200px 0 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      margin: 63px 0 0;
+    }
+  }
+}
+
+.form {
+  max-width: 390px;
+  input {
+    height: 64px;
+    line-height: 64px;
+    border-radius: 10px;
+    padding: 0 30px;
+    margin: 0 0 27px;
+    border: 1px solid #fff;
+    transition: border-color ease 0.4s;
+    &::placeholder {
+      color: #909090;
+    }
+    &:focus {
+      border-color: #12bc82;
+      transition: border-color ease 0.4s;
+    }
+    &.error {
+      border-color: red;
+    }
+    @media screen and (max-width: 767px) {
+      height: 58px;
+      line-height: 58px;
+    }
+  }
+  &__input {
+    position: relative;
+    #valid {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      font-size: 12px;
+      color: red;
+    }
+  }
+  &__button {
+    margin: 0 0 17px;
+    .btn-gradient {
+      width: 100%;
+      border-radius: 10px;
+      &.disabled {
+        opacity: 0.5;
+        cursor: auto;
+      }
+      span {
+        padding: 23px 70px;
+        max-width: 100%;
+        b {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  &__aggree {
+    font-size: 14px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 5px;
+      &:hover,
+      &:focus {
+        color: #bfdf2c;
+      }
+    }
+  }
+}
